@@ -1,0 +1,127 @@
+/* Arquivo styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+}
+
+/* Estilo básico para o corpo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #b8c1f8;
+    animation-duration: .6s;
+    animation-name: bodyIn;
+}
+
+@keyframes bodyIn {
+    0%{
+        opacity: 0.5;
+        transform: translateY(-200vh);
+    }
+
+    100%{
+        opacity: 1.0;
+        transform: translateY(0);
+    }
+}
+
+/* Container principal do dashboard */
+.dashboard {
+    width: 80%;
+    max-width: 1000px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Estilo para o título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os botões */
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    width: 150px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Estilo para o container de gráficos */
+.chart-container {
+    width: 100%;
+    margin: 20px 0;
+    display: none; /* Esconde todos os gráficos inicialmente */
+}
+
+/* Estilo para mostrar o gráfico ativo */
+.chart-container.active {
+    display: block; /* Apenas o gráfico ativo será exibido */
+}
+
+/* Container para botões */
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilo adicional para o botão de atualizar */
+.att {
+    background-color: #2fbdac;
+}
+
+.att:hover {
+    background-color: #179485;
+}
+
+/* Container de gráficos escondido por padrão */
+.chart-container {
+    display: none;
+    animation-name: fadeIn;
+    animation-duration: .6s;
+}
+
+@keyframes fadeIn {
+
+    0%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+}
+
+/* Mostra apenas o gráfico ativo */
+.chart-container.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#containerPieChart{
+    height: 480px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interativo</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Importa o CSS -->
+    <!-- Importa a biblioteca Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="dashboard">
+    <h1>Dashboard Interativo</h1>
+    <div class="buttons">
+        <!-- Botões para alternar entre os gráficos -->
+        <button id="buttonPieChart">Gráfico de Pizza</button>
+        <button id="buttonBarChart">Gráfico de Barras</button>
+        <button id="buttonLineChart">Gráfico de Linha</button>
+        <!-- Botão para atualizar os gráficos -->
+        <button id="buttonUpdate" class="att">Atualizar Dados</button>
+    </div>
+
+    <!-- Containers dos gráficos -->
+    <div id="containerPieChart" class="chart-container">
+        <canvas id="pieChart"></canvas>
+    </div>
+    <div id="containerBarChart" class="chart-container">
+        <canvas id="barChart"></canvas>
+    </div>
+    <div id="containerLineChart" class="chart-container">
+        <canvas id="lineChart"></canvas>
+    </div>
+</div>
+
+
+    <!-- Script JS -->
+    <script src="scripts.js"></script>
+</body>
+</html>
